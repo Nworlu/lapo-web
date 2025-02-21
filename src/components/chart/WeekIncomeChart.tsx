@@ -1,7 +1,7 @@
-import {
-  recentRequestTableBodyData,
-  recentRequestTableData,
-} from "@/data/navlink";
+// import {
+//   recentRequestTableBodyData,
+//   recentRequestTableData,
+// } from "@/data/navlink";
 import React from "react";
 
 const WeekIncomeChart = () => {
