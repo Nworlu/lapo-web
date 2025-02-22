@@ -17,7 +17,7 @@ const CardProfilePage = () => {
     }
   }, []);
   return (
-    <AppWrapper>
+    <AppWrapper className="pt-24 px-2 lg:p-0 lg:pt-4 pb-14 lg:pb-10">
       <header className="flex justify-between">
         <div className="flex flex-col gap-1.5 border-b-[0.5px] border-b-[#98A2B3] pb-3 w-full">
           <h2 className="text-[#121212] font-bold text-lg">Card Profile</h2>

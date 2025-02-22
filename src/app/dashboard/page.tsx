@@ -18,7 +18,7 @@ export default function Home() {
     }
   }, []);
   return (
-    <AppWrapper className="pb-6">
+    <AppWrapper className="pt-24 px-2 lg:p-0 lg:pt-4 pb-14 lg:pb-10">
       <header className="flex flex-col md:flex-row justify-between gap-7">
         <div className="flex flex-col gap-1.5 ">
           <h2 className="text-[#121212] font-bold text-lg">
