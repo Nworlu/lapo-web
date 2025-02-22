@@ -1,7 +1,7 @@
 export const NavLinkData = [
   {
     text: "Dashoard",
-    href: "#",
+    href: "/",
   },
   {
     text: "Branches",
@@ -21,7 +21,11 @@ export const NavLinkData = [
   },
   {
     text: "Card Profile",
-    href: "#",
+    href: "/card-profile",
+  },
+  {
+    text: "Card Request",
+    href: "/card-request",
   },
   {
     text: "Stock",
@@ -132,4 +136,129 @@ export const recentRequestTableBodyData = [
     quantity: "10",
     status: "Pending",
   },
+];
+
+export const cardProfileTableHeadData = [
+  "Card Name",
+  "Currency",
+  "Expiration",
+  "Bin Prefix",
+  "Date Created",
+  "Action",
+];
+export const cardrequestTableHeadData = [
+  "Branch",
+  "Initiator",
+  "Quantity",
+  "Batch",
+  "Date Requested",
+  "Status",
+  "Action",
+];
+
+export const cardRequestTableData = [
+  {
+    branch: "Corporate",
+    initator: "RootUser",
+    quantity: "10",
+    batch: "847264905",
+    created: "11/14/2024  10:27:43",
+    status: "Ready",
+  },
+  {
+    branch: "Corporate",
+    initator: "RootUser",
+    quantity: "10",
+    batch: "847264905",
+    created: "11/14/2024  10:27:43",
+    status: "Ready",
+  },
+  {
+    branch: "Corporate",
+    initator: "RootUser",
+    quantity: "10",
+    batch: "847264905",
+    created: "11/14/2024  10:27:43",
+    status: "In Progress",
+  },
+  {
+    branch: "Corporate",
+    initator: "RootUser",
+    quantity: "10",
+    batch: "847264905",
+    created: "11/14/2024  10:27:43",
+    status: "Pending",
+  },
+  {
+    branch: "Corporate",
+    initator: "RootUser",
+    quantity: "10",
+    batch: "847264905",
+    created: "11/14/2024  10:27:43",
+    status: "Acknowledged",
+  },
+];
+
+export const feedTableHeadData = [
+  "Name",
+  "Value",
+  "Frequency",
+  "Currency",
+  "Time",
+  "Account Pad",
+  "Account",
+];
+
+export const cardProfileTableData = [
+  {
+    name: "Verve-1",
+    currency: "NGN",
+    expiration: "40 months",
+    bin: "50611234",
+    created: "11/10/2024  23:21:03",
+  },
+  {
+    name: "Verve-1",
+    currency: "NGN",
+    expiration: "40 months",
+    bin: "50611234",
+    created: "11/10/2024  23:21:03",
+  },
+  {
+    name: "Verve-1",
+    currency: "NGN",
+    expiration: "40 months",
+    bin: "50611234",
+    created: "11/10/2024  23:21:03",
+  },
+];
+
+export const cardSchemeData = [
+  {
+    label: "Verve",
+    value: "verve",
+  },
+];
+
+export const currencySchemeData = [
+  {
+    label: "NGN",
+    value: "ngn",
+  },
+];
+export const branchofficeeData = [
+  {
+    label: "Head Office",
+    value: "head-office",
+  },
+];
+
+export const currencyData = ["NGN", "USD"];
+
+export const feeFreqData = ["One Off", "Monthy"];
+export const feeImpactData = ["Issuance", "Pin Reissue"];
+export const accountPadData = [
+  "None",
+  "Branch Code Prefix",
+  "Branch Code Suffix",
 ];
