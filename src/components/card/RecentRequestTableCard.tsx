@@ -15,9 +15,9 @@ const RecentRequestTableCard = () => {
       : "border-[#EAECF0] bg-[#F9FAFB] text-[#344054]";
   };
   return (
-    <div className="border border-[#E2E2E2] bg-white flex flex-col h-fit rounded-xl p-4 gap-5">
+    <div className="border border-[#E2E2E2] bg-white flex flex-col h-fit rounded-xl p-4 gap-5 overflow-x-auto">
       <div>
-        <h3 className="text-[#121212] font-medium text-lg">
+        <h3 className="text-[#121212] font-medium text-base md:text-lg">
           Recent Card Requests
         </h3>
       </div>
@@ -25,7 +25,10 @@ const RecentRequestTableCard = () => {
         <thead className="border border-[#E2E2E2] bg-[#F1F7FF] h-10">
           <tr>
             {recentRequestTableData.map((value, index) => (
-              <th key={index} className="text-[#0000008F] text-xs font-medium">
+              <th
+                key={index}
+                className="text-[#0000008F] text-[10px] md:text-xs font-medium"
+              >
                 {value}
               </th>
             ))}
@@ -34,17 +37,17 @@ const RecentRequestTableCard = () => {
         <tbody>
           {recentRequestTableBodyData.map((value, index) => (
             <tr key={index} className="border-b border-b-[#EAECF0] h-12">
-              <td className="text-[#475467] text-xs font-normal text-center">
+              <td className="text-[#475467] text-[10px] md:text-xs font-normal text-center">
                 {value.branch}
               </td>
-              <td className="text-[#475467] text-xs font-normal text-center">
+              <td className="text-[#475467] text-[10px] md:text-xs font-normal text-center">
                 {value.type}
               </td>
-              <td className="text-[#475467] text-xs font-normal text-center">
+              <td className="text-[#475467] text-[10px] md:text-xs font-normal text-center">
                 {value.quantity}
               </td>
               <td
-                className={`text-[#475467] text-xs font-normal flex justify-center py-3.5 items-center`}
+                className={`text-[#475467] text-[10px] md:text-xs font-normal flex justify-center py-3.5 items-center`}
               >
                 <p
                   className={`w-fit text-center px-2 py-0.5 border rounded-2xl ${isColorRight(
@@ -54,7 +57,7 @@ const RecentRequestTableCard = () => {
                   {value.status}
                 </p>
               </td>
-              <td className="text-[#014DAF] text-xs font-bold text-center">
+              <td className="text-[#014DAF] text-[10px] md:text-xs font-bold text-center">
                 <button>View</button>
               </td>
             </tr>

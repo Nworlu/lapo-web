@@ -1,70 +1,108 @@
+import AccountIcon from "@/components/icon/AccountIcon";
+import BankNoteIcon from "@/components/icon/BankNoteIcon";
+import BranchesIcon from "@/components/icon/BranchesIcon";
+import CardCheckIcon from "@/components/icon/CardCheckIcon";
+import CardEditIcon from "@/components/icon/CardEditIcon";
+import CardIcon from "@/components/icon/CardIcon";
+import CardPlusIcon from "@/components/icon/CardPlusIcon";
+import CardShieldIcon from "@/components/icon/CardShieldIcon";
+import CreditCardIcon from "@/components/icon/CreditCardIcon";
+import DashboardIcon from "@/components/icon/DashboardIcon";
+import HourGlassIcon from "@/components/icon/HourGlassIcon";
+import ListIcon from "@/components/icon/ListIcon";
+import ProfileIcon from "@/components/icon/ProileIcon";
+import QueueIcon from "@/components/icon/QueueIcon";
+import RequestIcon from "@/components/icon/RequestIcon";
+import RoleIcon from "@/components/icon/RoleIcon";
+import SchemeIcon from "@/components/icon/SchemeIcon";
+import StockIcon from "@/components/icon/StockIcon";
+import TrailIcon from "@/components/icon/TrailIcon";
+import UsersIcon from "@/components/icon/UsersIcon";
+
 export const NavLinkData = [
   {
-    text: "Dashoard",
-    href: "/",
+    text: "Dashboard",
+    href: "/dashboard",
+    Icon: DashboardIcon,
   },
   {
     text: "Branches",
     href: "#",
+    Icon: BranchesIcon,
   },
   {
     text: "Roles",
     href: "#",
+    Icon: RoleIcon,
   },
   {
     text: "Users",
     href: "#",
+    Icon: UsersIcon,
   },
   {
     text: "Card Scheme",
     href: "#",
+    Icon: SchemeIcon,
   },
   {
     text: "Card Profile",
     href: "/card-profile",
+    Icon: ProfileIcon,
   },
   {
     text: "Card Request",
     href: "/card-request",
+    Icon: RequestIcon,
   },
   {
     text: "Stock",
     href: "#",
+    Icon: StockIcon,
   },
   {
     text: "Cards",
     href: "#",
+    Icon: CardIcon,
   },
   {
     text: "Autthorization List",
     href: "#",
+    Icon: ListIcon,
   },
   {
     text: "Autthorization Queue",
     href: "#",
+    Icon: QueueIcon,
   },
   {
     text: "Trail",
     href: "#",
+    Icon: TrailIcon,
   },
   {
     text: "Account",
     href: "#",
+    Icon: AccountIcon,
   },
 ];
 
 export const quickAccessData = [
   {
     text: "Manage a Card",
+    Icon: CardShieldIcon,
   },
   {
     text: "Issue Instant Card",
+    Icon: CreditCardIcon,
   },
   {
     text: "Issue Personalized Card",
+    Icon: CardEditIcon,
   },
   {
     text: "Review Card Requests",
+    Icon: CardPlusIcon,
   },
 ];
 
@@ -76,6 +114,8 @@ export const analyticsCardData = [
     percent: "+9%",
     period: "this month",
     text: "",
+    Icon: CardCheckIcon,
+    color: "#00984C",
   },
   {
     title: "Total Personalized Cards",
@@ -84,6 +124,8 @@ export const analyticsCardData = [
     percent: "8.5%",
     period: "this month",
     text: "",
+    Icon: CardEditIcon,
+    color: "#8020E7",
   },
   {
     title: "Today’s Revenue",
@@ -92,6 +134,8 @@ export const analyticsCardData = [
     percent: "+6%",
     period: "vs yesterday",
     text: "",
+    Icon: BankNoteIcon,
+    color: "#2087E7",
   },
   {
     title: "Pending Requests",
@@ -100,6 +144,8 @@ export const analyticsCardData = [
     percent: "",
     period: "",
     text: "Requires attention",
+    Icon: HourGlassIcon,
+    color: "#E78020",
   },
 ];
 

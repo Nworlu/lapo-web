@@ -7,14 +7,20 @@ import {
   feeFreqData,
   feeImpactData,
 } from "@/data/navlink";
+import PlusSquareIcon from "../icon/PlusSquareIcon";
+import CloseIcon from "../icon/CloseIcon";
 
-const AddFeeModal = () => {
+type Props = {
+  onClose: () => void;
+};
+const AddFeeModal = (props: Props) => {
+  const { onClose } = props;
   return (
     <div
       style={{
         backdropFilter: "blur(5px)",
       }}
-      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center"
+      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center px-3 z-50"
     >
       <div
         style={{
@@ -22,11 +28,13 @@ const AddFeeModal = () => {
 
           // boxShadow:"0px 20px 24px -4px #10182814",
         }}
-        className="max-w-lg bg-white rounded-xl w-full h-fit pt-4"
+        className="max-w-lg bg-white rounded-xl w-full h-[500px] lg:h-fit pt-4 overflow-y-auto"
       >
-        <header className="flex justify-between px-6 w-full border-b border-b-[#EAECF0] pb-3">
+        <header className="flex justify-between px-4 md:px-6 w-full border-b border-b-[#EAECF0] pb-3">
           <div className="flex items-center gap-4 w-full">
-            <div className="border border-[#EAECF0] bg-white w-14 h-12 rounded-xl"></div>
+            <div className="border border-[#EAECF0] bg-white w-14 h-12 rounded-xl flex items-center justify-center">
+              <PlusSquareIcon />
+            </div>
             <div className="flex flex-col gap-1 pb-3 w-full">
               <h2 className="text-[#121212] font-bold text-lg">Add Fee</h2>
               <p className="text-[#121212] text-xs font-normal">
@@ -34,8 +42,11 @@ const AddFeeModal = () => {
               </p>
             </div>
           </div>
+          <button onClick={onClose}>
+            <CloseIcon />
+          </button>
         </header>
-        <div className="px-6 pt-5 flex flex-col gap-4">
+        <div className="px-4 md:px-6 pt-5 flex flex-col gap-4">
           <CustomInput
             label="Fee Name*"
             type="text"
@@ -69,7 +80,7 @@ const AddFeeModal = () => {
           </div>
           <div className="flex flex-col gap-3">
             <p className="text-[#344054] text-sm font-medium">Account Pad</p>
-            <div className="flex items-center gap-5">
+            <div className="flex flex-wrap items-center gap-5">
               {accountPadData.map((item, index) => (
                 <CustomRadio key={index} name={item} />
               ))}

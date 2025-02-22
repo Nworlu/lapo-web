@@ -1,4 +1,5 @@
 import React from "react";
+import CheckCircleIcon from "../icon/CheckCircleIcon";
 
 type Props = {
   onClose: () => void;
@@ -11,7 +12,7 @@ const SendDispatchModal = (props: Props) => {
       style={{
         backdropFilter: "blur(5px)",
       }}
-      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center"
+      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50"
     >
       <div
         style={{
@@ -19,7 +20,9 @@ const SendDispatchModal = (props: Props) => {
         }}
         className="max-w-md bg-white rounded-xl w-full h-fit p-6 flex flex-col gap-4"
       >
-        <div className="border border-[#EAECF0] bg-white w-14 h-12 rounded-xl"></div>
+        <div className="border border-[#EAECF0] bg-white w-14 h-12 rounded-xl flex items-center justify-center">
+          <CheckCircleIcon />
+        </div>
         <div className="flex flex-col gap-1">
           <h4 className="text-[#101828] text-lg font-medium">Successful</h4>
           <p className="text-[#475467] text-sm font-normal">

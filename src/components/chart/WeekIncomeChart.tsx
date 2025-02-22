@@ -1,12 +1,31 @@
+"use client";
 // import {
 //   recentRequestTableBodyData,
 //   recentRequestTableData,
 // } from "@/data/navlink";
 import React from "react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  CartesianGrid,
+} from "recharts";
 
+const data = [
+  { day: "Mon", income: 40 },
+  { day: "Tue", income: 20 },
+  { day: "Wed", income: 50 },
+  { day: "Thu", income: 60 },
+  { day: "Fri", income: 30 },
+  { day: "Sat", income: 70 },
+  { day: "Sun", income: 90 },
+];
 const WeekIncomeChart = () => {
   //   const isColorRight = (status: string) => {
-  //     return status.toLowerCase().includes("ready")
+  //     return status.toLowerCase().includes("ready")s
   //       ? "border-[#ABEFC6] bg-[#ECFDF3] text-[#067647]"
   //       : status.toLowerCase().includes("in progress")
   //       ? "border-[#FEDF89] bg-[#FFFAEB] text-[#B54708]"
@@ -15,12 +34,21 @@ const WeekIncomeChart = () => {
   //       : "border-[#EAECF0] bg-[#F9FAFB] text-[#344054]";
   //   };
   return (
-    <div className="border border-[#E2E2E2] bg-white flex flex-col h-80 rounded-xl p-4 gap-5">
+    <div className="border border-[#E2E2E2] bg-white flex flex-col h-fit rounded-xl p-4 gap-5">
       <div>
         <h3 className="text-[#121212] font-medium text-lg">
           This Week’s Income
         </h3>
       </div>
+      <ResponsiveContainer width="100%" height={252}>
+        <LineChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="day" />
+          <YAxis />
+          <Tooltip />
+          <Line type="monotone" dataKey="income" stroke="#00C853" />
+        </LineChart>
+      </ResponsiveContainer>
       {/* <table>
         <thead className="border border-[#E2E2E2] bg-[#F1F7FF] h-10">
           <tr>

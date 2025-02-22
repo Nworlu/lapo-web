@@ -25,7 +25,7 @@ const CustomInput = (props: Props) => {
         <select
           name=""
           id=""
-          className="border border-[#D0D5DD] bg-[#FFFFFF] rounded-lg h-11 flex-1 py-2.5 px-3.5 outline-none text-[#667085] font-normal text-base"
+          className="border border-[#D0D5DD] bg-[#FFFFFF] rounded-lg h-11 flex-1 py-2.5 px-3.5 outline-none text-[#667085] font-normal text-base w-full"
         >
           {options?.map((option, index) => (
             <option
@@ -40,7 +40,7 @@ const CustomInput = (props: Props) => {
       ) : (
         <input
           type={type}
-          className={`border border-[#D0D5DD] bg-[#FFFFFF] rounded-lg h-11 flex-1 py-2.5 px-3.5 outline-none text-[#667085] font-normal text-base ${className}`}
+          className={`border border-[#D0D5DD] rounded-lg h-11 flex-1 py-2.5 px-3.5 outline-none text-[#667085] font-normal text-base ${className}`}
           placeholder={placeholder}
         />
       )}

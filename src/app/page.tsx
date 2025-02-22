@@ -1,16 +1,17 @@
-import AnalyticsCard from "@/components/card/AnalyticsCard";
-import QuickAccessCard from "@/components/card/QuickAccessCard";
-import RecentRequestTableCard from "@/components/card/RecentRequestTableCard";
-import CardStatusDistribution from "@/components/chart/CardStatusDistribution";
-import MonthlyBarChart from "@/components/chart/MonthlyBarChart";
-import WeekIncomeChart from "@/components/chart/WeekIncomeChart";
-import { analyticsCardData, quickAccessData } from "@/data/navlink";
+// import AnalyticsCard from "@/components/card/AnalyticsCard";
+// import QuickAccessCard from "@/components/card/QuickAccessCard";
+// import RecentRequestTableCard from "@/components/card/RecentRequestTableCard";
+// import CardStatusDistribution from "@/components/chart/CardStatusDistribution";
+// import MonthlyBarChart from "@/components/chart/MonthlyBarChart";
+// import WeekIncomeChart from "@/components/chart/WeekIncomeChart";
+// import { analyticsCardData, quickAccessData } from "@/data/navlink";
 import AppWrapper from "@/layout/AppWrapper";
 
 export default function Home() {
   return (
     <AppWrapper className="pb-6">
-      <header className="flex justify-between">
+      <p>ffff</p>
+      {/* <header className="flex justify-between">
         <div className="flex flex-col gap-1.5 ">
           <h2 className="text-[#121212] font-bold text-lg">
             Hi Nazeer, what would you like to do today?
@@ -60,7 +61,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </AppWrapper>
   );
 }

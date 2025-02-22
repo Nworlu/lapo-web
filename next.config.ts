@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
     return config;
   },
   /* other Next.js config options */
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/dashboard",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
