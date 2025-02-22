@@ -34,14 +34,14 @@ const CardIcon = (props: Props) => {
       <path
         d="M6.66675 10.6665H7.66675"
         stroke={color}
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M9.66675 10.6665L12.0001 10.6665"
         stroke={color}
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
