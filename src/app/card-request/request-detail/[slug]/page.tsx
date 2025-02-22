@@ -8,13 +8,15 @@ import CustomInput from "@/components/input/CustomInput";
 import DownloadFileModal from "@/components/modal/DownloadFileModal";
 import SendDispatchModal from "@/components/modal/SendDispatchModal";
 import AppWrapper from "@/layout/AppWrapper";
+import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-const RequestDetailPage = ({ params }: { params?: { slug?: string } }) => {
+const RequestDetailPage = () => {
+  const { slug } = useParams();
   const [openDownloadFile, setOpenDownloadFile] = useState(false);
   const [openSendDispatch, setOpenSendDispatch] = useState(false);
 
-  console.log(params, "hhjhjnjj");
+  console.log(slug, "hhjhjnjj");
 
   const handleOnCloseDownload = () => {
     setOpenDownloadFile(false);
@@ -26,10 +28,6 @@ const RequestDetailPage = ({ params }: { params?: { slug?: string } }) => {
   useEffect(() => {
     document.title = "Request Details";
   }, []);
-  if (!params?.slug) {
-    console.error("Error: params.slug is undefined");
-    return <p>Error loading page.</p>;
-  }
 
   return (
     <AppWrapper>
