@@ -10,7 +10,7 @@ import SendDispatchModal from "@/components/modal/SendDispatchModal";
 import AppWrapper from "@/layout/AppWrapper";
 import React, { useEffect, useState } from "react";
 
-const RequestDetailPage = ({ params }: { params: { slug: string } }) => {
+const RequestDetailPage = ({ params }: { params?: { slug?: string } }) => {
   const [openDownloadFile, setOpenDownloadFile] = useState(false);
   const [openSendDispatch, setOpenSendDispatch] = useState(false);
 
@@ -26,6 +26,10 @@ const RequestDetailPage = ({ params }: { params: { slug: string } }) => {
   useEffect(() => {
     document.title = "Request Details";
   }, []);
+  if (!params?.slug) {
+    console.error("Error: params.slug is undefined");
+    return <p>Error loading page.</p>;
+  }
 
   return (
     <AppWrapper>
