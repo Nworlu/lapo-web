@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className="border-b border-b-[#DEDEDF] h-fit lg:h-12 py-4 flex flex-col gap-3 lg:flex-row lg:items-center justify-between px-5 lg:py-0 fixed top-0 left-0 w-full lg:relative z-30 bg-white">
-      <div className="flex items-center ">
+      <div className="flex items-center flex-wrap">
         {pathSegments.length > 1 && (
           <button
             onClick={() => router.back()}
@@ -31,14 +31,14 @@ const Navbar = () => {
             <div className="rotate-180">
               <ChevronRightIcon />
             </div>
-            <p className="text-xs font-medium">Back</p>
+            <p className="text-[10px] font-medium">Back</p>
           </button>
         )}
         {pathSegments.length > 1 && <ChevronRightIcon />}
 
         <div className="flex items-center gap-3 px-4">
           {FirstRouteIcon && <FirstRouteIcon color="#001735" />}
-          <h3 className="text-xs text-[#001735] font-medium">
+          <h3 className="text-[10px] text-[#001735] font-medium">
             {firstRouteName}
           </h3>
         </div>
@@ -51,7 +51,7 @@ const Navbar = () => {
               <li key={href} className="flex items-center">
                 {pathSegments.length > 1 && <ChevronRightIcon />}
                 {/* {index > 0 && <span className="mx-1">/</span>} */}
-                <h3 className="text-xs text-[#001735] font-medium">
+                <h3 className="text-[10px] text-[#001735] font-medium">
                   {formatTitle(segment)}
                 </h3>
               </li>

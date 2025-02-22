@@ -44,7 +44,7 @@ export default function RootLayout({
               <Sidebar />
               <div className="w-full overflow-y-scroll h-full">
                 <Navbar />
-                <div className="w-full h-full overflow-y-scroll mt-20 pt-2 lg:pt-0 lg:mt-0">
+                <div className="w-full h-full overflow-y-scroll mt-20cre pt-2 lg:pt-0 lg:mt-0">
                   {children}
                 </div>
               </div>

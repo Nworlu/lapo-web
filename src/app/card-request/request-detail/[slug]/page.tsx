@@ -10,9 +10,11 @@ import SendDispatchModal from "@/components/modal/SendDispatchModal";
 import AppWrapper from "@/layout/AppWrapper";
 import React, { useEffect, useState } from "react";
 
-const RequestDetailPage = () => {
+const RequestDetailPage = ({ params }: { params: { slug: string } }) => {
   const [openDownloadFile, setOpenDownloadFile] = useState(false);
   const [openSendDispatch, setOpenSendDispatch] = useState(false);
+
+  console.log(params, "hhjhjnjj");
 
   const handleOnCloseDownload = () => {
     setOpenDownloadFile(false);
@@ -27,16 +29,18 @@ const RequestDetailPage = () => {
 
   return (
     <AppWrapper>
-      <header className="flex justify-between">
+      <header className="flex justify-between pt-8">
         <div className="flex flex-col gap-1.5 pb-3 w-full">
-          <h2 className="text-[#121212] font-bold text-lg">Create Profile</h2>
+          <h2 className="text-[#121212] font-bold text-lg">Request Details</h2>
           <p className="text-[#121212] text-xs font-normal">
-            Fill in profile details and add card fee.
+            Perform predetermined actions on card requests here.
           </p>
         </div>
       </header>
       <div className="bg-white border border-[#E2E2E2] rounded-xl w-full p-4 mt-6 h-fit pb-7">
-        <h3 className="text-[#121212] text-lg font-medium">Profile Details</h3>
+        <h3 className="text-[#121212] text-lg font-medium">
+          Card Request Details
+        </h3>
         <div className="mt-6 h-full max-w-4xl w-full flex flex-col gap-5">
           <div className="flex flex-col gap-4 md:flex-row md:items-center lg:gap-32">
             <CustomInput

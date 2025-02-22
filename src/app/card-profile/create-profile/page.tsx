@@ -23,9 +23,11 @@ const CreateProfilePagee = () => {
   return (
     <>
       <AppWrapper>
-        <header className="flex justify-between">
+        <header className="flex justify-between ">
           <div className="flex flex-col gap-1.5 pb-3 w-full">
-            <h2 className="text-[#121212] font-bold text-lg">Create Profile</h2>
+            <h2 className="text-[#121212] font-bold text-lg pt-8">
+              Create Profile
+            </h2>
             <p className="text-[#121212] text-xs font-normal">
               Fill in profile details and add card fee.
             </p>
