@@ -15,7 +15,7 @@ const Navbar = () => {
   const firstRoute = `/${pathSegments[0]}`;
 
   const formatTitle = (segment: string) =>
-    segment.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+    segment?.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   const firstRouteData = NavLinkData.find((item) => item.href === firstRoute);
   const firstRouteName = firstRouteData?.text || formatTitle(pathSegments[0]);
   const FirstRouteIcon = firstRouteData?.Icon;

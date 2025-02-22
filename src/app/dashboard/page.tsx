@@ -12,7 +12,10 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Dashboard";
+    if (typeof window !== "undefined") {
+      // Safe to use window
+      document.title = "Dashboard";
+    }
   }, []);
   return (
     <AppWrapper className="pb-6">

@@ -16,7 +16,10 @@ const CardRequestPage = () => {
       : "border-[#EAECF0] bg-[#F9FAFB] text-[#344054]";
   };
   useEffect(() => {
-    document.title = "Card Request";
+    if (typeof window !== "undefined") {
+      // Safe to use window
+      document.title = "Card Request";
+    }
   }, []);
   return (
     <AppWrapper>

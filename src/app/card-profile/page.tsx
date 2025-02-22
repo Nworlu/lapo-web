@@ -11,7 +11,10 @@ import React, { useEffect } from "react";
 const CardProfilePage = () => {
   const router = useRouter();
   useEffect(() => {
-    document.title = "Card Profile";
+    if (typeof window !== "undefined") {
+      // Safe to use window
+      document.title = "Card Profile";
+    }
   }, []);
   return (
     <AppWrapper>

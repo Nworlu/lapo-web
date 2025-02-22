@@ -18,7 +18,10 @@ const CreateProfilePagee = () => {
     setShowAddFeeModal(false);
   };
   useEffect(() => {
-    document.title = "Create Profile";
+    if (typeof window !== "undefined") {
+      // Safe to use window
+      document.title = "Create Profile";
+    }
   }, []);
   return (
     <>

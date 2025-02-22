@@ -26,7 +26,10 @@ const RequestDetailPage = () => {
   };
 
   useEffect(() => {
-    document.title = "Request Details";
+    if (typeof window !== "undefined") {
+      // Safe to use window
+      document.title = "Request Details";
+    }
   }, []);
 
   return (
